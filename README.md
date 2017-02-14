@@ -11,3 +11,7 @@ $ yarn global add aurelia-cli
 $ yarn install
 $ au run --watch
 ```
+
+## Credits
+
+- Icons are taken from [Font Awesome](http://fontawesome.io/), licensed under SIL OFL 1.1.
