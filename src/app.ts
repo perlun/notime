@@ -1,5 +1,4 @@
 import { remote } from 'electron';
-import { inject } from 'aurelia-framework';
 import { Router, RouterConfiguration } from 'aurelia-router';
 
 export class App {
