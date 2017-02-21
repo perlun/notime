@@ -16,7 +16,7 @@ let serve = gulp.series(
   build,
   done => {
     childProcess
-      .spawn(electron, ['.'], {
+      .spawn(electron, ['electron_output'], {
         stdio: 'inherit'
       })
       .on('close', () => {
