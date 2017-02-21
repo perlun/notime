@@ -1,5 +1,5 @@
-import {Aurelia} from 'aurelia-framework'
-import {ValidationMessageProvider} from 'aurelia-validation';
+import { Aurelia } from 'aurelia-framework'
+import { ValidationMessageProvider } from 'aurelia-validation';
 import environment from './environment';
 
 //Configure Bluebird Promises.
@@ -30,5 +30,5 @@ export function configure(aurelia: Aurelia) {
     return this.parser.parseMessage(translation);
   };
 
-  aurelia.start().then(() => {return aurelia.setRoot()});
+  aurelia.start().then(() => { return aurelia.setRoot() });
 }

@@ -15,19 +15,19 @@
             "./typings/**/*.d.ts",
             "./custom_typings/**/*.d.ts"
         ],
-        "source": "source/**/*.ts"
+        "source": "src/**/*.ts"
     },
     "markupProcessor": {
         "id": "none",
         "displayName": "None",
         "fileExtension": ".html",
-        "source": "source/**/*.html"
+        "source": "src/**/*.html"
     },
     "cssProcessor": {
         "id": "sass",
         "displayName": "Sass",
         "fileExtension": ".scss",
-        "source": "source/**/*.scss"
+        "source": "src/**/*.scss"
     },
     "editor": {
         "id": "vscode",
@@ -39,12 +39,12 @@
         "source": "spec/unit/**/*.ts"
     },
     "paths": {
-        "root": "source",
-        "resources": "source/resources",
-        "elements": "source/elements",
-        "attributes": "source/attributes",
-        "valueConverters": "source/value-converters",
-        "bindingBehaviors": "source/binding-behaviors"
+        "root": "src",
+        "resources": "src/resources",
+        "elements": "src/elements",
+        "attributes": "src/attributes",
+        "valueConverters": "src/value-converters",
+        "bindingBehaviors": "src/binding-behaviors"
     },
     "testFramework": {
         "id": "jasmine",
