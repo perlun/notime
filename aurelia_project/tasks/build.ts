@@ -1,5 +1,6 @@
 import * as gulp from 'gulp';
 import transpile from './transpile';
+import transpileElectronApp from './transpileElectronApp';
 import processMarkup from './process-markup';
 import processCSS from './process-css';
 import { build } from 'aurelia-cli';
@@ -10,6 +11,7 @@ export default gulp.series(
   readProjectConfiguration,
   gulp.parallel(
     transpile,
+    transpileElectronApp,
     processMarkup,
     processCSS,
     prepareFontAwesome
