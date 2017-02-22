@@ -9,3 +9,9 @@ html {
     align-content: center;
     text-align: center;
 }
+
+router-view {
+  position: absolute;
+  margin-left: 3em;
+  padding: 1em;
+}
