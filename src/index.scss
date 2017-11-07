@@ -1,6 +1,6 @@
 // BROKEN
-// $FontPathOpenSans: "fonts"; //open-sans";
-// @import '../node_modules/npm-font-open-sans/open-sans';
+$FontPathOpenSans: '~npm-font-open-sans/fonts';
+@import '~npm-font-open-sans/open-sans';
 
 html {
     font-family: 'Open Sans';
