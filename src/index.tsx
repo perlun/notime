@@ -2,9 +2,13 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import './index.scss';
 
-import { Hello } from "./components/Hello";
+import { IconBar } from "./components/IconBar";
+import { RouterView } from "./components/RouterView";
 
 ReactDOM.render(
-    <Hello id="content" compiler="TypeScript" framework="React" />,
+    <div id="window">
+        <IconBar/>
+        <RouterView/>
+    </div>,
     document.getElementById("example")
 );

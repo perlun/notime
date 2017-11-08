@@ -31,9 +31,9 @@ body {
     flex-flow: column;
 }
 
-window,
-window .content,
-window .content * {
+#window,
+#window .content,
+#window .content * {
     display: flex;
     flex-flow: column;
     flex: 1;

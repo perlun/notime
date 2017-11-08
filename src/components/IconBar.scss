@@ -1,0 +1,40 @@
+.icon-bar {
+  background: #252526;
+  position: absolute;
+  width: 3em;
+  height: 100%;
+}
+
+.icon-bar {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    width: 2em;
+    height: 2em;
+  }
+
+  a {
+    display: flex;
+    margin: 0;
+    padding: 7px;
+    color: #cccccc;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+
+  a.active {
+    color: white;
+  }
+
+  a:hover {
+    color: white;
+  }
+}
