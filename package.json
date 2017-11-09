@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/react": "^16.0.19",
     "@types/react-dom": "^16.0.2",
+    "font-awesome": "^4.7.0",
     "npm-font-open-sans": "^1.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"

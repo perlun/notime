@@ -2,6 +2,10 @@
 $FontPathOpenSans: '~npm-font-open-sans/fonts';
 @import '~npm-font-open-sans/open-sans';
 
+// FontAwesome
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
+
 // Colors
 $text: #FFFFFF;
 
