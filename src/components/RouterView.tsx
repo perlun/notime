@@ -1,7 +1,11 @@
 import * as React from 'react';
 
 export class RouterView extends React.Component<{}, {}> {
-  render() {
-    return <div/>
+  public render() {
+    return (
+      <div className='router-view'>
+        Here is the content.
+      </div>
+    );
   }
-};
+}
