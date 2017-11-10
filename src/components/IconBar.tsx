@@ -1,28 +1,30 @@
 import * as React from 'react';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+  } from 'react-router-dom';
 import './IconBar.scss';
 
 export class IconBar extends React.Component<{}, {}> {
     public render() {
         return (
-            <div className='icon-bar'>
-                <ul>
-                    <li>
-                        <a className='active'
-                           title='Time'
-                           href='#'
-                           route-href='route: time_entry'>
-                           <i className='fa fa-clock-o'></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a title='Estimation'
-                            href='#'
-                            route-href='route: estimation'>
-                            <i className='fa fa-bar-chart'></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <Router>
+                <div className='icon-bar'>
+                    <ul>
+                        <li>
+                            <Link to='/time_entry'>
+                            <i className='fa fa-clock-o'></i>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to='/estimation'>
+                                <i className='fa fa-bar-chart'></i>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </Router>
         );
     }
 }
