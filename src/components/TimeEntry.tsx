@@ -4,8 +4,23 @@ export class TimeEntry extends React.Component<{}, {}> {
   public render() {
     return (
       <div>
-        TODO: Time entry
+        <h2>
+          Timesheet for 2017-11-16
+        </h2>
+
+        <ul>
+          {this.timesheetItems()}
+        </ul>
       </div>
     );
+  }
+
+  public timesheetItems() {
+    const items = [
+      'Internal: Internal misc',
+      'External: External misc',
+    ];
+
+    return items.map(s => <li>{s}</li>);
   }
 }
