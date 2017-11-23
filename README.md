@@ -2,12 +2,12 @@
 
 ## Frameworks and tools used
 
-* React
-* nwjs
+* [React](https://reactjs.org/)
+* [Electron](https://electronjs.org/)
 
 ## To run
 
 - `npm install`
 - `npm install -g webpack`
 - `webpack --watch` (in one terminal)
-- `~/bin/nwjs-sdk-v0.26.2-osx-x64/nwjs.app/Contents/MacOS/nwjs .` (in another terminal, replace path as needed)
+- `NOTIME_API_ROOT=https://some-url npm start` (in another terminal, replace path as needed)

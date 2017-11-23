@@ -16,6 +16,10 @@ export class TimeEntry extends React.Component<{}, {}> {
   }
 
   public timesheetItems() {
+    debugger
+    const apiRoot = process.execPath; //process.env.NOTIME_API_ROOT;
+    console.log("Root:" + apiRoot);
+
     const items = [
       'Internal: Internal misc',
       'External: External misc',
