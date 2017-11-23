@@ -19,8 +19,9 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
+    // FIXME: Use different URL for local development and deployed version.
+    pathname: 'localhost:8080',
+    protocol: 'http:',
     slashes: true
   }));
 

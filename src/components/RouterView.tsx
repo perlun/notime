@@ -12,6 +12,7 @@ export class RouterView extends React.Component<{}, {}> {
         {/* Workaround since Electron loading the index.html from file doesn't allow us to just match the path
             with /index.html */}
         {window.location.pathname.includes('index.html') && <Redirect to='/time_entry' />}
+        <Route exact path='/'><Redirect to='/time_entry'/></Route>
         <Route path='/time_entry' component={TimeEntry}/>
         <Route path='/estimation' component={Estimation}/>
       </div>

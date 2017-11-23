@@ -1,4 +1,6 @@
-# notime - simple time tracking tool
+# notime - simple time travel tool
+
+notime lets you travel in time. Seriously. You will end up hours later than when you started, when using it. :smiley:
 
 ## Frameworks and tools used
 
@@ -8,6 +10,5 @@
 ## To run
 
 - `npm install`
-- `npm install -g webpack`
-- `webpack --watch` (in one terminal)
+- `npm run server` (in one terminal)
 - `NOTIME_API_ROOT=https://some-url npm start` (in another terminal, replace path as needed)
