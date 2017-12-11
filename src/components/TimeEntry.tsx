@@ -5,7 +5,7 @@ export class TimeEntry extends React.Component<{}, {}> {
     return (
       <div>
         <h2>
-          Timesheet for 2017-11-16
+          Timesheet for 2017-11-24
         </h2>
 
         <ul>
@@ -16,9 +16,9 @@ export class TimeEntry extends React.Component<{}, {}> {
   }
 
   public timesheetItems() {
-    debugger
-    const apiRoot = process.execPath; //process.env.NOTIME_API_ROOT;
-    console.log("Root:" + apiRoot);
+    //debugger
+    const apiRoot = process.execPath; // process.env.NOTIME_API_ROOT;
+    //console.log("Root:" + apiRoot);
 
     const items = [
       'Internal: Internal misc',

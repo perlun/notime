@@ -1,20 +1,27 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
+import { AppContainer } from 'react-hot-loader';
 
-import { IconBar } from './components/IconBar';
-import { RouterView } from './components/RouterView';
-import './index.scss';
+import { App } from './components/App';
+
+const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-    <div id='window'>
-        <Router>
-            {/* The Router must have a single child element */}
-            <div>
-                <IconBar/>
-                <RouterView/>
-            </div>
-        </Router>
-    </div>,
-    document.getElementById('example'),
+    <AppContainer>
+        <App />
+    </AppContainer>,
+    rootElement,
 );
+
+// Hot Module Replacement API
+if (module.hot) {
+    module.hot.accept('./components/App', () => {
+        const NextApp = require<{ default: typeof App }>('./components/App').default;
+        ReactDOM.render(
+            <AppContainer>
+                <NextApp />
+            </AppContainer>,
+            rootElement,
+        );
+    });
+}
