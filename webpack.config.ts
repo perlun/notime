@@ -14,6 +14,14 @@ const config: webpack.Configuration = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
+
+        // FIXME: Disabled for now, we don't have jQuery and popper.js properly installed it seems.
+        // new webpack.ProvidePlugin({
+        //     '$': 'jquery',
+        //     'Popper': ['popper.js', 'default'],
+        //     'jQuery': 'jquery',
+        //     'window.jQuery': 'jquery',
+        // }),
     ],
 
     // Enable sourcemaps for debugging webpack's output.
@@ -28,30 +36,30 @@ const config: webpack.Configuration = {
         rules: [
             {
                 exclude: [
-                  /\.html$/,
-                  // We have to write /\.(js|jsx)(\?.*)?$/ rather than just /\.(js|jsx)$/
-                  // because you might change the hot reloading server from the custom one
-                  // to Webpack's built-in webpack-dev-server/client?/, which would not
-                  // get properly excluded by /\.(js|jsx)$/ because of the query string.
-                  // Webpack 2 fixes this, but for now we include this hack.
-                  // https://github.com/facebookincubator/create-react-app/issues/1713
-                  /\.(js|jsx)(\?.*)?$/,
-                  /\.(ts|tsx)(\?.*)?$/,
-                  /\.css$/,
-                  /\.json$/,
-                  /\.bmp$/,
-                  /\.gif$/,
-                  /\.jpe?g$/,
-                  /\.png$/,
-                  /\.scss$/,
+                    /\.html$/,
+                    // We have to write /\.(js|jsx)(\?.*)?$/ rather than just /\.(js|jsx)$/
+                    // because you might change the hot reloading server from the custom one
+                    // to Webpack's built-in webpack-dev-server/client?/, which would not
+                    // get properly excluded by /\.(js|jsx)$/ because of the query string.
+                    // Webpack 2 fixes this, but for now we include this hack.
+                    // https://github.com/facebookincubator/create-react-app/issues/1713
+                    /\.(js|jsx)(\?.*)?$/,
+                    /\.(ts|tsx)(\?.*)?$/,
+                    /\.css$/,
+                    /\.json$/,
+                    /\.bmp$/,
+                    /\.gif$/,
+                    /\.jpe?g$/,
+                    /\.png$/,
+                    /\.scss$/,
                 ],
                 loader: require.resolve('file-loader'),
                 options: {
-                   name: 'static/media/[name].[hash:8].[ext]',
-                 },
+                    name: 'static/media/[name].[hash:8].[ext]',
+                },
 
-                 // Dummy, needed to get the code validated towards the TypeScript type definition.
-                 test: () => true,
+                // Dummy, needed to get the code validated towards the TypeScript type definition.
+                test: () => true,
             },
 
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
@@ -73,18 +81,29 @@ const config: webpack.Configuration = {
             {
                 test: /\.scss$/,
                 use: [
-                  require.resolve('style-loader'),
-                  {
-                    loader: require.resolve('css-loader'),
-                    options: {
-                      importLoaders: 1,
+                    require.resolve('style-loader'),
+                    {
+                        loader: require.resolve('css-loader'),
+                        options: {
+                            importLoaders: 1,
+                        },
                     },
-                  },
-                  {
-                    loader: require.resolve('sass-loader'),
-                  },
+                    {
+                        loader: 'postcss-loader', // Run post css actions
+                        options: {
+                            plugins() { // post css plugins, can be exported to postcss.config.js
+                                return [
+                                    require('precss'),
+                                    require('autoprefixer'),
+                                ];
+                            },
+                        },
+                    },
+                    {
+                        loader: require.resolve('sass-loader'),
+                    },
                 ],
-              },
+            },
         ],
     },
 

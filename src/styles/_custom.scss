@@ -1,0 +1,13 @@
+// App-specific variables
+$panel: #2D2D30;
+$panel-light: #3F3F41;
+$panel-dark: darken($panel, 5);
+$panel-darker: darken($panel, 10);
+
+// TODO: test the Darkly theme from https://bootswatch.com/
+
+// Overrides of the default Bootstrap styles.
+$font-family-base: 'Open Sans';
+$body-bg: $panel;
+$body-color: white;
+$enable-rounded: false;

@@ -1,3 +1,6 @@
+@import '../styles/custom';
+@import '~bootstrap/scss/bootstrap';
+
 // OpenSans suppport
 $FontPathOpenSans: '~npm-font-open-sans/fonts';
 @import '~npm-font-open-sans/open-sans';
@@ -9,23 +12,15 @@ $fa-font-path: '~font-awesome/fonts';
 // Colors
 $text: #FFFFFF;
 
-$panel: #2D2D30;
-$panel-light: #3F3F41;
-$panel-dark: darken($panel, 5);
-$panel-darker: darken($panel, 10);
-
 $border: #68217A;
 
 html {
-    font-family: 'Open Sans';
     overflow: hidden;
 }
 
 body {
     padding: 0;
     margin: 0;
-    color: #fff;
-    background-color: $panel;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,22 +45,17 @@ body {
     flex: 1;
 }
 
-@media print {
-    body {
-        border: none;
-    }
-    #title-bar {
-        display: none;
-    }
-}
+// .text {
+//     align-content: center;
+//     text-align: center;
+// }
 
-.text {
-    align-content: center;
-    text-align: center;
-}
+// .router-view {
+//     position: absolute;
+//     margin-left: 3em;
+//     padding: 1em;
+// }
 
-.router-view {
-    position: absolute;
-    margin-left: 3em;
+.login-router-view {
     padding: 1em;
-  }
+}
