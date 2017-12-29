@@ -6,7 +6,7 @@ export class LoginView extends React.Component<{}, {}> {
       <div className='container'>
         {/* TODO: center content on screen. Flexbox? */}
         <div className='row'>
-          <div className='col-xs'>
+          <div className='col-6 offset-3'>
             <form>
               <div className='form-group'>
                 <label>Email Address:</label>
