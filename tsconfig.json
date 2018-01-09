@@ -2,7 +2,11 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
-        "noImplicitAny": true,
+
+        // TODO: Enable this once we feel we are ready for it. At the moment we don't know React and TypeScript well enough to
+        // make it worthwhile.
+        "noImplicitAny": false,
+
         "module": "commonjs",
         "target": "es2016",
         "jsx": "react",
