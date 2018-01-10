@@ -1,4 +1,3 @@
-//import 'bootstrap';
 import * as React from 'react';
 import { MemoryRouter as Router } from 'react-router-dom';
 import './App.scss';
