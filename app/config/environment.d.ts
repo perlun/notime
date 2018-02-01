@@ -1,3 +1,5 @@
+// tslint:disable:no-namespace no-var-keyword
+
 export default config;
 
 /**
